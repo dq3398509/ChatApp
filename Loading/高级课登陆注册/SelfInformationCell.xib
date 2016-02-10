@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="SelfInformationCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatListCellHead" translatesAutoresizingMaskIntoConstraints="NO" id="Pcw-Jn-BKL">
+                        <rect key="frame" x="333" y="8" width="34" height="33.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33.5" id="HQT-rW-0RW"/>
+                            <constraint firstAttribute="width" constant="34" id="olG-ZC-Q96"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="16.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-Im-4Ou">
+                        <rect key="frame" x="69" y="7" width="259" height="33.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFJ-W0-qXF">
+                                <rect key="frame" x="8" y="-1" width="243" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="259" id="Aik-MW-pxb"/>
+                            <constraint firstAttribute="trailing" secondItem="LFJ-W0-qXF" secondAttribute="trailing" constant="8" id="V3L-qd-f3K"/>
+                            <constraint firstAttribute="bottom" secondItem="LFJ-W0-qXF" secondAttribute="bottom" constant="1" id="WNl-1R-AvZ"/>
+                            <constraint firstItem="LFJ-W0-qXF" firstAttribute="top" secondItem="MJf-Im-4Ou" secondAttribute="top" constant="-1" id="Yne-eo-CjY"/>
+                            <constraint firstItem="LFJ-W0-qXF" firstAttribute="leading" secondItem="MJf-Im-4Ou" secondAttribute="leading" constant="8" id="dCV-7j-mOO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Pcw-Jn-BKL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="JcG-XN-nOM"/>
+                    <constraint firstItem="Pcw-Jn-BKL" firstAttribute="leading" secondItem="MJf-Im-4Ou" secondAttribute="trailing" constant="5" id="RKZ-e7-THC"/>
+                    <constraint firstItem="Pcw-Jn-BKL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Yl3-z3-X56"/>
+                    <constraint firstItem="MJf-Im-4Ou" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="cvN-lQ-mil"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MJf-Im-4Ou" secondAttribute="bottom" constant="1" id="fdm-YR-Th8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="LFJ-W0-qXF" id="kai-Nk-k80"/>
+                <outlet property="labelWidth" destination="Aik-MW-pxb" id="LeS-U7-KeM"/>
+            </connections>
+            <point key="canvasLocation" x="271.5" y="278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chatListCellHead" width="51" height="51"/>
+    </resources>
+</document>
